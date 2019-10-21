@@ -12,3 +12,7 @@ Practice steps:
 6. Add your name and email to members file in new line.
 7. Create pull request assigning to me (Wen) on gitlab site.
 8. Let us check the work flow for future.
+
+# Git simple tutorial
+
+[git - 简易指南](https://www.bootcss.com/p/git-guide/)
