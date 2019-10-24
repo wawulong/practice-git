@@ -37,10 +37,7 @@ Refer to
 ```
 git config core.editor notepad (to be verify)
 ```
-or you can learn bash and vim
-```
-[整理一下vim命令的基本用法](https://blog.csdn.net/AmberWu/article/details/72733351)
-```
+or you can learn bash and vim [整理一下vim命令的基本用法](https://blog.csdn.net/AmberWu/article/details/72733351)
 
 4. Commit it to repository
 ```
