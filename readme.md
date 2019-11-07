@@ -65,3 +65,47 @@ After create a project, some settings have to change:
 1. Default Branch, for good workflow, it uses **develop** branch to be default one, Settings > Repository > Default Branch (push first).
 2. Protected Branches, for miss merge, it has to protect develop and master (for release) branches, Settings > Repository > Protected Branches (push first)
 3. Disable Auto DevOps pipeline to avoid build failed, Settings > CI/CD > Auto DevOps.
+
+# Prune local branchs
+
+```
+git remote prune origin
+```
+
+## Example, prune unnecessary branchs
+```
+Wen@DESKTOP-UIEVQIG MINGW64 /c/workspace/Project/git-practice (local-sync)
+$ git br -a
+  develop
+* local-sync
+  master
+  principle
+  template
+  remotes/origin/HEAD -> origin/develop
+  remotes/origin/develop
+  remotes/origin/longfei
+  remotes/origin/master
+  remotes/origin/patch-1
+  remotes/origin/patch-2
+  remotes/origin/tutorial
+
+Wen@DESKTOP-UIEVQIG MINGW64 /c/workspace/Project/git-practice (local-sync)
+$ git remote prune origin
+Pruning origin
+URL: git@10.11.15.10:rd_fw/git-practice.git
+ * [pruned] origin/longfei
+ * [pruned] origin/patch-1
+ * [pruned] origin/patch-2
+ * [pruned] origin/tutorial
+
+Wen@DESKTOP-UIEVQIG MINGW64 /c/workspace/Project/git-practice (local-sync)
+$ git br -a
+  develop
+* local-sync
+  master
+  principle
+  template
+  remotes/origin/HEAD -> origin/develop
+  remotes/origin/develop
+  remotes/origin/master
+```
