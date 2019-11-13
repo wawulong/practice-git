@@ -1,7 +1,13 @@
-# observed behavior
+## observed behavior
 
-# expected behavior
+## expected behavior
 
-# steps to reproduce
+## steps to reproduce
+1.
+2.
+3.
 
-# fW version and device, etc.
+## fw version and device, etc.
+- version:
+- platform:
+- subsystem:

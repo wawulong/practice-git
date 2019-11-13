@@ -1,0 +1,18 @@
+## description
+
+## close issue
+## gitlab related syntax
+[//]: # (same project: #44)
+[//]: # (same group: project#44)
+[//]: # (different group: group/project#44)
+
+## how to test/repro
+
+## changes include
+- [ ] bugfix (non-breaking change that solves an issue)
+- [ ] new feature (the non-breaking change that adds functionality)
+- [ ] breaking change (change that is not backward-compatible and/or changes current functionality)
+
+## checklist
+- [ ] I have tested this code
+- [ ] I have updated the Readme
