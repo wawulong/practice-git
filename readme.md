@@ -3,7 +3,7 @@
 # Document and templates
 ## 工作文件範本/線上文件
 
-- [Google drive]()
+- Google drive: KS_RD_FW
 - [新項目/專案檢查表](https://docs.google.com/spreadsheets/d/1b95Q5ky9YXmZh5hNtW3IkPgrY2tPiAGlUnjyGGa3yJs/edit#gid=1429060716) (收到新專案SW/FW需要執行的工作檢查表)
 - [工作日報](https://docs.google.com/spreadsheets/d/1MMgnXeBbXcZQlSFji4i4CvEL3s2ZK4d92m83klq44Hk/edit#gid=0) (每月由負責人確認內容後郵寄, 考慮用谷歌文件線上統一修改)
 - [工作周報](https://docs.google.com/spreadsheets/d/1nf-0e-CyoqaZkCk1hBNIYWVgMheHJPDt6JUjH1xVzbg/edit#gid=901739152) (每月由負責人確認內容後郵寄, 考慮用谷歌文件線上統一修改)
