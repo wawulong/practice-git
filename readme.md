@@ -1,28 +1,32 @@
 # FW work instructions
 
-# Document and templates
-## 工作文件範本/線上文件
+### Document and Templates
 
-- Google drive: KS_RD_FW
-- [新項目/專案檢查表](https://docs.google.com/spreadsheets/d/1b95Q5ky9YXmZh5hNtW3IkPgrY2tPiAGlUnjyGGa3yJs/edit#gid=1429060716) (收到新專案SW/FW需要執行的工作檢查表)
-- [工作日報](https://docs.google.com/spreadsheets/d/1MMgnXeBbXcZQlSFji4i4CvEL3s2ZK4d92m83klq44Hk/edit#gid=0) (每月由負責人確認內容後郵寄, 考慮用谷歌文件線上統一修改)
-- [工作周報](https://docs.google.com/spreadsheets/d/1nf-0e-CyoqaZkCk1hBNIYWVgMheHJPDt6JUjH1xVzbg/edit#gid=901739152) (每月由負責人確認內容後郵寄, 考慮用谷歌文件線上統一修改)
-- [FW財產表與工作總結](https://docs.google.com/spreadsheets/d/19900ndwEAJzICcl2nVzJPEKaE-Vh1MTsGP-F25Iik40/edit#gid=549601375)
+- Google drive: KS RD FW
+    1. Project checklist, **SW/FW Project Checklist**
+    2. SW/FW test case, **SW/FW Test Case**
+    3. Daily report, **Daily Report - Wen Wu**
+    4. Weekly report, **Weekly Report - Wen Wu**
+    5. Work completion list, **Work Completion**
+    6. Property list, **Property Management**
 
-## 績效相關文件
-- [績效評分表](https://docs.google.com/spreadsheets/d/1QlYCfw7t8cuHq0v3qnGy_DJgJEJXGdNuq9MRJifJkX4/edit#gid=1033936910) (文件分享權限給領導,不公開評量)
+- Performance Evaluation
+    1. Members performance evaluation *in private*, **Members Performance**
 
-## 技能
-- [Git版本追蹤練習](http://10.11.15.10/rd_fw/git-practice)及[Git相關內容範本](http://10.11.15.10/rd_fw/git-practice/tree/develop/template)
-
-# Gitlab new a project note
+### Gitlab Configuration
 
 After create a project, some settings have to change:
-1. Default Branch, for good workflow, it uses **develop** branch to be default one, Settings > Repository > Default Branch (push first).
-2. Protected Branches, for miss merge, it has to protect develop and master (for release) branches, Settings > Repository > Protected Branches (push first)
+1. ~~Default Branch, Settings > Repository > Default Branch~~
+2. ~~Protected Branches, Settings > Repository > Protected Branches~~
 3. Disable Auto DevOps pipeline to avoid build failed, Settings > CI/CD > Auto DevOps.
 
-# Git practice
+### Gitlab Workflow
+
+Please refer to:
+1. [GitLab Workflow: An Overview](https://about.gitlab.com/blog/2016/10/25/gitlab-workflow-an-overview/)
+2. [Introduction to GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
+
+### Git Practice
 
 Please add your name and email to members file.
 
@@ -37,18 +41,20 @@ Practice steps:
 7. Create pull request assigning to me (Wen) on gitlab site.
 8. Let us check the work flow for future.
 
-## Git simple tutorial
+### Git Simple Tutorial
 
 [git - 简易指南](https://www.bootcss.com/p/git-guide/)
 
 - [浅谈命令行（一）：命令行基本操作（包括vim在终端的基本操作）](https://zhuanlan.zhihu.com/p/34522441)
     - [整理一下vim命令的基本用法](https://blog.csdn.net/AmberWu/article/details/72733351)
 
-## Git GUI tool - TortoiseGit
+- [Git可视化极简易教程 — Git  GUI使用方法](https://www.runoob.com/w3cnote/git-gui-window.html)
+
+### Git GUI tool - TortoiseGit
 
 [TortoiseGit日常工作中的基本操作(clone、pull、commit、push、merge)](http://blog.leanote.com/post/qian_c/TortoiseGit%E6%97%A5%E5%B8%B8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-clone%E3%80%81pull%E3%80%81commit%E3%80%81push%E3%80%81merge)
 
-## Git local
+### Git Local Operations
 
 1. Create branch and checkout to new branch
 ```
@@ -78,7 +84,7 @@ git commit
 
 Refer to this flow ![git local operations](https://git-scm.com/figures/18333fig0106-tn.png)
 
-## Git remote
+### Git Remote Operations
 
 After you finish, push this new-branch to remote.
 ```
@@ -90,13 +96,14 @@ branch (these operations on gitlab site).
 
 Refer to this flow ![git local and remote](https://blog.techbridge.cc/img/kdchang/cs101/git-workflow.png)
 
-# Prune local branchs
+### Prune Local Branch with Remote
 
 ```
 git remote prune origin
 ```
 
-## Example, prune unnecessary branchs
+Example:
+
 ```
 Wen@DESKTOP-UIEVQIG MINGW64 /c/workspace/Project/git-practice (local-sync)
 $ git br -a
