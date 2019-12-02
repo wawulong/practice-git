@@ -1,7 +1,17 @@
-# type(scope): subject
-# type catalog: feat, fix, docs, style, refactor, test, chore/routine
+########50 characters############################
+# Summarise the change in less than 50 characters
 
-# brief
-# with bullet outline
+########72 characters##################################################
+#Because:
+#- Explain the reasons you made this change
+#- Make a new bullet for each reason
+#- Each line should be under 72 characters
 
-# [ticket: xxx]
+# Explain exactly what was done in this commit with more depth than the
+# 50 character subject line. Remember to wrap at 72 characters!
+
+# These changes should resolve issue #1337.
+
+# Inclue any additional notes, relevant links, or co-authors.
+# This commit removed the left-pad dependency, so please stop using it!
+# Co-authored-by: nspinazz89 <nick@example.com>
