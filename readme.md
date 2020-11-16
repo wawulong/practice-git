@@ -5,113 +5,116 @@ This repository is a practice of git operations and workflow.
 # Practice Steps
 
 1. Install git environmnet
-1. Config your information, name and email
+1. Config your information - name and email
 1. Clone this project
 1. Check out develop branch
-1. Create a branch for your change, and name it with same meaning
-1. Add your name and email to members file in new line, then save
-1. Stage, commit and push the branch which you just created
-1. Open gitlab then create a pull request assigning to me
-1. Done
+1. Local operations - create branch, stage and commit changes
+1. Remote operations - push branch, merge request (co-worker notification)
 
-## Git Local Operations
+## Install git environment
+Download and install git from [official site](https://git-scm.com/downloads).
 
-1. Create branch and checkout to new branch
+## Config your information - name and email
+Open teminal from side-menu (right key). Then execute belows:
 ```
-git branch new-branch-name
-git checkout new-branch-name
+git config --global user.name "newbie_name"
+git config --global user.email "newbie_name@bizlinktech.com"
+
+# Use the notepad to be the commit editor, default is vim
+git config --global core.editor "notepad"
+# Check the config
+git config --global --list
 ```
+
+## Clone this project
+
+On your workspace,
+```
+git clone http://10.11.15.10/ks-rd-fw/git-practice.git
+```
+
+## Check out develop branch
+Checkout develop repository (local-link),
+```
+git checkout develop
+```
+
+## Local operations - create branch, stage and commit changes
+
+
+![git local operations](https://git-scm.com/figures/18333fig0106-tn.png)
+
+1. Create a branch and checkout
+
+```
+git branch add-newbie-info
+git checkout add-newbie-info
+
+# Alternatives
+git checkout -b add-newbie-info
+```
+
 2. Modify file
 
-3. Add modified-file to stage
+(blah blah...)
+
+3. Stage modified-file
+
 ```
 git add members
 ```
 
-Before step 4, you can change git default editor to notepad (windows).
-Refer to
-[How can I set up an editor to work with Git on Windows?](https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows/1431003)
-```
-git config core.editor notepad (to be verify)
-```
-or you can learn bash and vim [整理一下vim命令的基本用法](https://blog.csdn.net/AmberWu/article/details/72733351)
+4. Check the status
 
-4. Commit it to repository
+```
+git status
+```
+
+5. Check the changes
+
+```
+git diff
+```
+
+6. Commit the chages
+
 ```
 git commit
-(write clarity title and brief for other people)
+# Leave the details
+```
+Refer [如何寫一個 Git Commit Message](https://blog.louie.lu/2017/03/21/%E5%A6%82%E4%BD%95%E5%AF%AB%E4%B8%80%E5%80%8B-git-commit-message/)
+
+## Remote operations - push branch, merge request (co-worker notification)
+
+1. Push your branch and do Merge-Requests
+
+```
+git push origin add-newbie-info
 ```
 
-Refer to this flow ![git local operations](https://git-scm.com/figures/18333fig0106-tn.png)
+2. Select Merge Requests on the left side menu, write the details, blah blah...
 
-## Git Remote Operations
+If conflict, you have to fix it first, like pull it (local side) and fix the members revision.
 
-After you finish, push this new-branch to remote.
 ```
-git remote add origin http://gitlab-project-path
-git push origin new-branch-name
+git pull origin develop
+# Check status
+git status
+# Open editor with member file and fix
 ```
-Then create merge-request for this branch, and give it assignee and target
-branch (these operations on gitlab site).
 
-## Prune Local Branch with Remote
+# References
 
+- [How can I set up an editor to work with Git on Windows?](https://stackoverflow.com/questions/10564/how-can-i-set-up-an-editor-to-work-with-git-on-windows/1431003)
+
+- [整理一下vim命令的基本用法](https://blog.csdn.net/AmberWu/article/details/72733351)
+- [Clean up your local branches after merge and delete in GitHub](http://www.fizerkhan.com/blog/posts/Clean-up-your-local-branches-after-merge-and-delete-in-GitHub.html)
 ```
 git remote prune origin
 ```
+- [Introduction to GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
 
-Example:
-
-```
-Wen@DESKTOP-UIEVQIG MINGW64 /c/workspace/Project/git-practice (local-sync)
-$ git br -a
-  develop
-* local-sync
-  master
-  principle
-  template
-  remotes/origin/HEAD -> origin/develop
-  remotes/origin/develop
-  remotes/origin/longfei
-  remotes/origin/master
-  remotes/origin/patch-1
-  remotes/origin/patch-2
-  remotes/origin/tutorial
-
-Wen@DESKTOP-UIEVQIG MINGW64 /c/workspace/Project/git-practice (local-sync)
-$ git remote prune origin
-Pruning origin
-URL: git@10.11.15.10:rd_fw/git-practice.git
- * [pruned] origin/longfei
- * [pruned] origin/patch-1
- * [pruned] origin/patch-2
- * [pruned] origin/tutorial
-
-Wen@DESKTOP-UIEVQIG MINGW64 /c/workspace/Project/git-practice (local-sync)
-$ git br -a
-  develop
-* local-sync
-  master
-  principle
-  template
-  remotes/origin/HEAD -> origin/develop
-  remotes/origin/develop
-  remotes/origin/master
-```
-
-# Gitlab
-## Configuration of New Repository
+# KS Gitlab New Repository Configuration
 
 After create a project, some settings have to change:
-1. ~~Default Branch, Settings > Repository > Default Branch~~
-2. ~~Protected Branches, Settings > Repository > Protected Branches~~
-3. Disable Auto DevOps pipeline to avoid build failed, Settings > CI/CD > Auto DevOps.
-
-## Workflow
-
-Please refer to:
-1. [Introduction to GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html)
-
-## Git GUI tool - TortoiseGit
-
-[TortoiseGit日常工作中的基本操作(clone、pull、commit、push、merge)](http://blog.leanote.com/post/qian_c/TortoiseGit%E6%97%A5%E5%B8%B8%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-clone%E3%80%81pull%E3%80%81commit%E3%80%81push%E3%80%81merge)
+1. Disable Auto DevOps pipeline to avoid build failed, Settings > CI/CD > Auto DevOps.
